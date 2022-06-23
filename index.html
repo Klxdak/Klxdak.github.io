@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<style> 
+		td, th {
+		border: 1px solid black;
+		padding: 8px;
+		font-weight:bold;
+		} 
+	</style>
+		
+	
+<body>
+	<h3>Select Sword Data:</h3>
+	<form name="sword">
+		<select id="swordMaterial" onchange="showData()">
+			<option value="4">Wooden</option>
+			<option value="4">Gold</option>
+			<option value="5">Stone</option>
+			<option value="6">Iron</option>
+			<option value="7" selected="selected">Diamond</option>
+			<option value="8">Netherite</option>
+		</select>
+	</form>
+	<table id="swordStats">
+		<tbody>
+			<tr>
+				<th>Damage Source</th>
+				<th>Normal Damage</th>
+				<th>Crit Damage</th>
+			</tr>
+			
+			<tr>
+				<th>Sword</th>
+				<th id="swordMatBase"></th>
+                <th id="swordMatCrit"></th>
+
+			</tr>
+		</tbody>	
+	</table>
+
+    <script>
+        function trueDamage(_swordDamage,_critDamage) {
+            var swordDamage = parseInt(_swordDamage);
+            var critDamage = parseFloat((_swordDamage / 2)*3);
+            return swordDamage,critDamage;
+        }    
+
+        function showData() {
+     
+        var selSwordDamage = sword.swordMaterial;
+    
+        var readSwordDamage = selSwordDamage[selSwordDamage.selectedIndex].value;
+    
+        var dSwordMatBase = document.getElementById("swordMatBase");
+        var dSwordMatCrit = document.getElementById("swordMatCrit");
+        
+        var swordBase = trueDamage(readSwordDamage);
+        var swordCrit = trueDamage(readSwordDamage);
+        
+        dSwordMatBase.innerHTML = swordBase;
+        dSwordMatCrit.innerHTML = swordCrit;
+
+        }
+        showData;
+        
+    </script>
+</html>
