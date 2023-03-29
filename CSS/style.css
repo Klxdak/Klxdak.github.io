@@ -1,5 +1,65 @@
-td, th {
-    border: 1px solid black;
-	padding: 8px;
-	font-weight:bold;
-} 
+  /*  td, th {
+        border: 1px solid black;
+        padding: 8px;
+        font-weight:bold;
+    }
+    main{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    body{
+        background-color: rgb(83, 63, 98);
+        display:flex;
+        justify-content:center;
+    }
+    */
+    body {
+        background-color: #282c34; /* ciemny kolor tła */
+    }
+      
+    header {
+        text-align: center; /* tytuł na środku */
+        color: white; /* kolor tekstu tytułu */
+    }
+      
+    table {
+        margin: 0 auto; /* tabela na środku */
+        color: white; /* kolor tekstu tabeli */
+        border-collapse: collapse; /* usuwa margines między komórkami */
+    }
+      
+    th, td {
+        border: 1px solid white; /* białe obramowanie komórek */
+        padding: 10px; /* margines wewnątrz komórek */
+    }
+    h3 {
+        text-align: center; /* tekst na środku */
+        color: white; /* kolor tekstu */
+    }
+      
+    form {
+        margin: 0 auto; /* formularz na środku */
+        width: 50%; /* szerokość formularza */
+    }
+      
+    select {
+        width: 100%; /* pełna szerokość selecta */
+        padding: 10px; /* margines wewnątrz selecta */
+        border: none; /* usuwa obramowanie */
+        background-color: #555; /* kolor tła selecta */
+        color: white; /* kolor tekstu selecta */
+        font-size: 18px; /* rozmiar czcionki selecta */
+        appearance: none; /* usuwa domyślny strzałka w select */
+    }
+      
+    select:hover {
+        cursor: pointer; /* zmienia kursor na "pointer" po najechaniu na select */
+    }
+      
+    option {
+        background-color: #282c34; /* kolor tła opcji */
+        color: white; /* kolor tekstu opcji */
+        font-size: 18px; /* rozmiar czcionki opcji */
+    }
+          

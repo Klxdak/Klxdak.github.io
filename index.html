@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="script.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="JS/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 
 <body>
+	<header>
+		<h1>Minecraft Damage Calculator</h1>
+	</header>
 	<h3>Select Sword Data:</h3>
-	<form name="sword">
-		<select id="swordMaterial" onchange="showData()">
-			<option value="4">Wooden</option>
-			<option value="4">Gold</option>
-			<option value="5">Stone</option>
-			<option value="6">Iron</option>
-			<option value="7" selected="selected">Diamond</option>
-			<option value="8">Netherite</option>
-		</select>
-	</form>
-	<table id="swordStats">
-		<tbody>
-			<tr>
-				<th>Damage Source</th>
-				<th>Normal Damage</th>
-				<th>Crit Damage</th>
-			</tr>
-			
-			<tr>
-				<th>Sword</th>
-				<th id="swordMatBase"></th>
-                <th id="swordMatCrit"></th>
+	<main>
 
-			</tr>
-		</tbody>	
-	</table>
+		<form name="sword">
+			<select id="swordMaterial" onchange="showData()">
+				<option value="4">Wooden</option>
+				<option value="4">Gold</option>
+				<option value="5">Stone</option>
+				<option value="6">Iron</option>
+				<option value="7">Diamond</option>
+				<option value="8">Netherite</option>
+			</select>
+			<select id="swordStrength" onchange="showData()">
+				<option value="0">No Strength</option>
+				<option value="1">Strength 1</option>
+				<option value="2">Strength 2</option>
+			</select>
+			<select id="swordSharpness" onchange="showData()">
+				<option value="0">No Sharpness</option>
+				<option value="1">Sharpness I</option>
+				<option value="2">Sharpness II</option>
+				<option value="3">Sharpness III</option>
+				<option value="4">Sharpness IV</option>
+				<option value="5">Sharpness V</option>
+			</select>
+		</form><br><br>
 
+		<table id="swordStats">
+			<tbody>
+				<tr>
+					<th>Damage Source</th>
+					<th>Normal Damage</th>
+					<th>Crit Damage</th>
+				</tr>
+				<tr>
+					<th>Sword</th>
+					<th id="swordMatBase"></th>
+					<th id="swordMatCrit"></th>
+
+				</tr>
+				<tr>
+					<th>Strength</th>
+					<th id="swordStrBase"></th>
+					<th id="swordStrCrit"></th>
+				</tr>
+				<tr>
+					<th>Sharpness</th>
+					<th id="swordShrBase"></th>
+					<th id="swordShrCrit"></th>
+				</tr>
+				<tr>
+					<th>Summary</th>
+					<th id="swordSumBase"></th>
+					<th id="swordSumCrit"></th>
+				</tr>
+			</tbody>	
+		</table>
+
+	</main>
 </html>
