@@ -1,16 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-	<style> 
-		td, th {
-		border: 1px solid black;
-		padding: 8px;
-		font-weight:bold;
-		} 
-	</style>
-		
-	
 <body>
 	<h3>Select Sword Data:</h3>
 	<form name="sword">
@@ -40,30 +34,4 @@
 		</tbody>	
 	</table>
 
-    <script>
-        function trueDamage(_swordDamage,_critDamage) {
-            var swordDamage = parseInt(_swordDamage);
-            var critDamage = parseFloat((_swordDamage / 2)*3);
-            return swordDamage,critDamage;
-        }    
-
-        function showData() {
-     
-        var selSwordDamage = sword.swordMaterial;
-    
-        var readSwordDamage = selSwordDamage[selSwordDamage.selectedIndex].value;
-    
-        var dSwordMatBase = document.getElementById("swordMatBase");
-        var dSwordMatCrit = document.getElementById("swordMatCrit");
-        
-        var swordBase = trueDamage(readSwordDamage);
-        var swordCrit = trueDamage(readSwordDamage);
-        
-        dSwordMatBase.innerHTML = swordBase;
-        dSwordMatCrit.innerHTML = swordCrit;
-
-        }
-        showData;
-        
-    </script>
 </html>
