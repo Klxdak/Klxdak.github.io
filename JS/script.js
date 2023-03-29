@@ -36,8 +36,8 @@ function showData(){
     if (selectedValue == 4) {
         baseDamage.innerHTML = 4;
         critDamage.innerHTML = 4*1.5;
-        strengthBaseDamage.innerHTML = 4 *1.3 + 1.3-1/0.3;
-        strengthCritDamage.innerHTML = 4*1.5 *1.3*StrValue+ 1.3*StrValue-1/0.3;
+        strengthBaseDamage.innerHTML = 4 *Math.pow(1.3 , StrValue) + (Math.pow(1.3 , StrValue)-1)/0.3;
+        strengthCritDamage.innerHTML = 4*1.5 * Math.pow(1.3 , StrValue) + (Math.pow(1.3 , StrValue)-1)/0.3;
     }else if (selectedValue == 5) {
         baseDamage.innerHTML = 5;
         critDamage.innerHTML = 5*1.5;
