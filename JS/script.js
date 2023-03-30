@@ -24,31 +24,67 @@ showData;
 */
 
 function showData(){
-    // Pierwszy Wiersz 
+    // First line
     var baseDamage = document.getElementById("swordMatBase");
     var critDamage = document.getElementById("swordMatCrit");
-    // Drugi Wiersz
+    // Second line 
     var strengthBaseDamage = document.getElementById("swordStrBase");
     var strengthCritDamage = document.getElementById("swordStrCrit");
+    // Third line 
+    var sharpnessBaseDamage = document.getElementById("swordShrBase");
+    var sharpnessCritDamage = document.getElementById("swordShrCrit");
+    // Fourth line 
+    var summaryBaseDamage = document.getElementById("swordSumBase");
+    var summaryCritDamage = document.getElementById("swordSumCrit");
     
     var selectedValue = document.getElementById("swordMaterial").value;
     var StrValue = document.getElementById("swordStrength").value;
+    var ShrValue = document.getElementById("swordSharpness").value;
+
     if (selectedValue == 4) {
         baseDamage.innerHTML = 4;
         critDamage.innerHTML = 4*1.5;
-        strengthBaseDamage.innerHTML = 4 *Math.pow(1.3 , StrValue) + (Math.pow(1.3 , StrValue)-1)/0.3;
-        strengthCritDamage.innerHTML = 4*1.5 * Math.pow(1.3 , StrValue) + (Math.pow(1.3 , StrValue)-1)/0.3;
+        strengthBaseDamage.innerHTML = StrValue;
+        strengthCritDamage.innerHTML = StrValue*1.5;
+        sharpnessBaseDamage.innerHTML = ShrValue;
+        sharpnessCritDamage.innerHTML = ShrValue;
+        summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
+        summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
     }else if (selectedValue == 5) {
         baseDamage.innerHTML = 5;
         critDamage.innerHTML = 5*1.5;
+        strengthBaseDamage.innerHTML = StrValue;
+        strengthCritDamage.innerHTML = StrValue*1.5;
+        sharpnessBaseDamage.innerHTML = ShrValue;
+        sharpnessCritDamage.innerHTML = ShrValue;
+        summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
+        summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
     }else if (selectedValue == 6) {
         baseDamage.innerHTML = 6;
         critDamage.innerHTML = 6*1.5;
+        strengthBaseDamage.innerHTML = StrValue;
+        strengthCritDamage.innerHTML = StrValue*1.5;
+        sharpnessBaseDamage.innerHTML = ShrValue;
+        sharpnessCritDamage.innerHTML = ShrValue;
+        summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
+        summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
     }else if (selectedValue == 7) {
         baseDamage.innerHTML = 7;
         critDamage.innerHTML = 7*1.5;
+        strengthBaseDamage.innerHTML = StrValue;
+        strengthCritDamage.innerHTML = StrValue*1.5;
+        sharpnessBaseDamage.innerHTML = ShrValue;
+        sharpnessCritDamage.innerHTML = ShrValue;
+        summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
+        summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
     }else if (selectedValue == 8) {
         baseDamage.innerHTML = 8;
         critDamage.innerHTML = 8*1.5;
+        strengthBaseDamage.innerHTML = StrValue;
+        strengthCritDamage.innerHTML = StrValue*1.5;
+        sharpnessBaseDamage.innerHTML = ShrValue;
+        sharpnessCritDamage.innerHTML = ShrValue;
+        summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
+        summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
     }
 }
