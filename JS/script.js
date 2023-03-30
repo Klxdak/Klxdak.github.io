@@ -41,6 +41,7 @@ function showData(){
     var StrValue = document.getElementById("swordStrength").value;
     var ShrValue = document.getElementById("swordSharpness").value;
 
+        // Wooden and Gold
     if (selectedValue == 4) {
         baseDamage.innerHTML = 4;
         critDamage.innerHTML = 4*1.5;
@@ -50,6 +51,7 @@ function showData(){
         sharpnessCritDamage.innerHTML = ShrValue;
         summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
         summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
+        // Stone
     }else if (selectedValue == 5) {
         baseDamage.innerHTML = 5;
         critDamage.innerHTML = 5*1.5;
@@ -59,6 +61,7 @@ function showData(){
         sharpnessCritDamage.innerHTML = ShrValue;
         summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
         summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
+        // Iron
     }else if (selectedValue == 6) {
         baseDamage.innerHTML = 6;
         critDamage.innerHTML = 6*1.5;
@@ -68,6 +71,7 @@ function showData(){
         sharpnessCritDamage.innerHTML = ShrValue;
         summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
         summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
+        // Diamond
     }else if (selectedValue == 7) {
         baseDamage.innerHTML = 7;
         critDamage.innerHTML = 7*1.5;
@@ -77,6 +81,7 @@ function showData(){
         sharpnessCritDamage.innerHTML = ShrValue;
         summaryBaseDamage.innerHTML = parseFloat(baseDamage.innerHTML) + parseFloat(strengthBaseDamage.innerHTML) + parseFloat(sharpnessBaseDamage.innerHTML);
         summaryCritDamage.innerHTML = parseFloat(critDamage.innerHTML) + parseFloat(strengthCritDamage.innerHTML) + parseFloat(sharpnessCritDamage.innerHTML);
+        // Netherite 
     }else if (selectedValue == 8) {
         baseDamage.innerHTML = 8;
         critDamage.innerHTML = 8*1.5;
